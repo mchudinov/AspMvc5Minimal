@@ -11,6 +11,6 @@ namespace Repositories
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Widget> Widgets { get; set; }
     }
 }
