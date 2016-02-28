@@ -6,19 +6,17 @@ namespace Gui.Controllers
 {
     public class WidgetController : Controller
     {
-        private readonly IWidgetRepository _repo;
         private readonly IWidgetCase _case;
 
         public WidgetController()
         {
-            _repo = new WidgetRepository();
-            _case = new WidgetCase();
+            _case = new WidgetCase(new WidgetRepository());
         }
 
         // GET: Widget
         public ActionResult Index()
         {
-            return View(_repo.GetAllWidgets());
+            return View(_case.GetAllWidgets());
         }
     }
 }
