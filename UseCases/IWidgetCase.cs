@@ -6,7 +6,7 @@ namespace UseCases
 {
     public interface IWidgetCase
     {
-        IList<Widget> GetAllWidgets();
+        IList<Widget> GetWidgets();
 
         IList<Widget> GetWidgets(string searchString);
 

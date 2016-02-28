@@ -19,7 +19,7 @@ namespace Gui.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(_case.GetAllWidgets());
+            return View(_case.GetWidgets());
         }
 
         [HttpGet]

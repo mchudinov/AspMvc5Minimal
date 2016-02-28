@@ -9,7 +9,7 @@ namespace Repositories
 {
     public class WidgetRepository : IWidgetRepository
     {
-        public IList<Widget> GetAllWidgets()
+        public IList<Widget> GetWidgets()
         {
             using (var db = new AppDbContext())
             {

@@ -14,7 +14,7 @@ namespace UseCases
             _repo = repo;
         }
 
-        public IList<Widget> GetAllWidgets()
+        public IList<Widget> GetWidgets()
         {
             return _repo.GetAllWidgets();
         }
