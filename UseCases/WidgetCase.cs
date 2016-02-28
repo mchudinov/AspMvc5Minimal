@@ -14,18 +14,6 @@ namespace UseCases
             _repo = repo;
         }
 
-        public Guid CreateWidget(string name, float price)
-        {
-            var w = new Widget {Name = name, Price = price};
-            _repo.SaveWidget(w);
-            return w.Id;
-        }
-
-        public void DeleteWidget(Guid id)
-        {
-            _repo.DeleteWidget(id);
-        }
-
         public IList<Widget> GetAllWidgets()
         {
             return _repo.GetAllWidgets();
@@ -39,6 +27,23 @@ namespace UseCases
         public IList<Widget> GetWidgets(string searchString)
         {
             return _repo.GetWidgets(searchString);
+        }
+
+        public Guid CreateWidget(string name, float price)
+        {
+            var w = new Widget {Name = name, Price = price};
+            _repo.SaveWidget(w);
+            return w.Id;
+        }
+
+        public void UpdateWidget(Widget widget)
+        {
+            _repo.SaveWidget(widget);
+        }
+
+        public void DeleteWidget(Guid id)
+        {
+            _repo.DeleteWidget(id);
         }
     }
 }

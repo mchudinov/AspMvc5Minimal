@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Threading.Tasks;
 using Models;
@@ -36,7 +37,7 @@ namespace Repositories
         {
             using (var db = new AppDbContext())
             {
-                db.Widgets.Add(widget);
+                db.Widgets.AddOrUpdate(widget);
                 await db.SaveChangesAsync();
             }
         }

@@ -8,12 +8,14 @@ namespace UseCases
     {
         IList<Widget> GetAllWidgets();
 
-        Guid CreateWidget(string name, float price);
-
-        void DeleteWidget(Guid id);
-
         IList<Widget> GetWidgets(string searchString);
 
         Widget GetWidget(Guid id);
+
+        Guid CreateWidget(string name, float price);
+
+        void UpdateWidget(Widget widget);
+
+        void DeleteWidget(Guid id);
     }
 }
