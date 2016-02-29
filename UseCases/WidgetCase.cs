@@ -16,7 +16,7 @@ namespace UseCases
 
         public IList<Widget> GetWidgets()
         {
-            return _repo.GetAllWidgets();
+            return _repo.GetWidgets();
         }
 
         public Widget GetWidget(Guid id)
