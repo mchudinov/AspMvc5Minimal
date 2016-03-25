@@ -88,7 +88,6 @@ namespace Gui.Controllers
 
         #region Edit
         [HttpGet]
-
         public ActionResult Edit(string id)
         {
             Widget widget = _case.GetWidget(new Guid(id));
